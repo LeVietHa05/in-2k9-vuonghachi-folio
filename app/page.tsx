@@ -1,69 +1,127 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const [clicked, setClicked] = useState(false);
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      {!clicked && (
         <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          src={"/1.png"}
+          onClick={() => setClicked(true)}
+          fill
+          alt=""
+        ></Image>
+      )}
+      {clicked && (
+        <main className="aboutPage">
+          <Image
+            className="aboutDoodle aboutCurl"
+            src="/images/doodles/about-01.svg"
+            width={229}
+            height={263}
+            alt=""
+            aria-hidden="true"
+          />
+          <Image
+            className="aboutDoodle aboutSparkle"
+            src="/images/doodles/about-04.svg"
+            width={61}
+            height={65}
+            alt=""
+            aria-hidden="true"
+          />
+          <Image
+            className="aboutDoodle aboutStar"
+            src="/images/doodles/about-05.svg"
+            width={180}
+            height={189}
+            alt=""
+            aria-hidden="true"
+          />
+          <Image
+            className="aboutDoodle aboutHeart"
+            src="/images/doodles/about-03.svg"
+            width={106}
+            height={104}
+            alt=""
+            aria-hidden="true"
+          />
+
+          <section className="aboutCopy" aria-labelledby="about-title">
+            <div className="aboutHeading">
+              <Image
+                className="aboutDoodle aboutBlueCurl"
+                src="/images/doodles/about-02.svg"
+                width={97}
+                height={111}
+                alt=""
+                aria-hidden="true"
+              />
+              <h1 id="about-title">
+                <span>ABOUT</span> <span className="aboutMe">ME</span>
+              </h1>
+              <p className="aboutName">(VUONG HA CHI)</p>
+            </div>
+
+            <p className="aboutBio">
+              Hi! I’m Chi, a 12th-grader from Hanoi, Vietnam. I am passionate
+              about science, especially biochemistry, and hope to be an R&D
+              researcher one day! My current research interest is sustainable
+              and bioactive packaging, as I believe this field is very promising
+              in both alleviating pollution and revolutionizing food
+              preservation. Outside of academics, I love drawing (especially
+              cute animals!), playing music, igniting a passion for science in
+              younger students with interactive classes, and collecting stamps.
+              With every activity, I want to spread my enthusiasm and whimsy and
+              bring sparkling joy to the world.
+            </p>
+
+            <Link className="aboutLab" href="/lab">
+              <span>TO THE</span>
+              <strong>LAB</strong>
+              <span className="aboutArrow" aria-hidden="true">
+                <Image
+                  src="/images/doodles/about-07.svg"
+                  width={81}
+                  height={4}
+                  alt=""
+                />
+                <Image
+                  src="/images/doodles/about-06.svg"
+                  width={25}
+                  height={45}
+                  alt=""
+                />
+              </span>
+            </Link>
+          </section>
+
+          <div
+            className="aboutPortrait"
+            aria-label="Chi dressed in a red costume"
           >
             <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+              className="aboutPhoto"
+              src="/images/intro/about-portrait.png"
+              width={1988}
+              height={2528}
+              alt="Chi smiling in a red costume"
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+            <Image
+              className="aboutFrame"
+              src="/images/intro/polaroid-frame.png"
+              width={800}
+              height={600}
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+        </main>
+      )}
     </div>
   );
 }

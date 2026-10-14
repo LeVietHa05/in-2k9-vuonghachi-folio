@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "opentabs": {
+      "type": "remote",
+      "url": "http://127.0.0.1:9515/mcp",
+      "headers": {
+        "Authorization": "Bearer 2dee8ff37637df4f1e1f2c334ec657cd5549daadf22a0e15054c142665214d26"
+      }
+    }
+  }
+}

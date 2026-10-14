@@ -24,3 +24,527 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: "Super Crafty";
+  src: url("/Super%20Crafty.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SVN Comic";
+  src: url("/SVN-Comic%20Sans%20MS.ttf") format("truetype");
+  font-display: swap;
+}
+
+.aboutPage {
+  --ink: #17136d;
+  --blue: #54afff;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  align-items: center;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  padding: clamp(2.5rem, 6vw, 5.75rem) clamp(1.5rem, 6.2vw, 5.5rem);
+  color: var(--ink);
+  background-color: #fbfaf5;
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 43px,
+      rgb(57 64 72 / 7%) 44px,
+      transparent 46px
+    ),
+    radial-gradient(ellipse at 12% 14%, rgb(255 255 255 / 85%), transparent 42%),
+    radial-gradient(ellipse at 89% 83%, rgb(232 230 219 / 24%), transparent 38%);
+  isolation: isolate;
+}
+
+.aboutCopy {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 600px);
+  padding-bottom: 0.5rem;
+}
+
+.aboutHeading {
+  position: relative;
+  width: fit-content;
+  margin-bottom: clamp(2rem, 4vw, 3.1rem);
+}
+
+.aboutHeading h1 {
+  margin: 0;
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: clamp(4.5rem, 8vw, 7.4rem);
+  font-weight: 400;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+  white-space: nowrap;
+}
+
+.aboutMe {
+  display: inline-block;
+  color: var(--blue);
+  transform: rotate(4deg) translateY(0.08em);
+}
+
+.aboutName {
+  margin: 0.85rem 0 0;
+  font-family: Georgia, serif;
+  font-size: clamp(0.85rem, 1.5vw, 1.25rem);
+  letter-spacing: 0.02em;
+}
+
+.aboutBio {
+  max-width: 36rem;
+  margin: 0;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  font-size: clamp(1rem, 1.55vw, 1.35rem);
+  line-height: 1.52;
+  text-align: justify;
+}
+
+.aboutLab {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: fit-content;
+  margin-top: clamp(2rem, 4vw, 3.25rem);
+  font-family: Georgia, serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+  letter-spacing: 0.06em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.aboutLab:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 0.45rem;
+  border-radius: 0.2rem;
+}
+
+.aboutLab strong {
+  color: var(--blue);
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: 1.3em;
+  letter-spacing: 0;
+  transform: rotate(-7deg);
+}
+
+.aboutArrow {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.35rem;
+}
+
+.aboutArrow img:first-child {
+  width: clamp(2.5rem, 5vw, 4.5rem);
+  height: clamp(1.98px, 0.247vw, 3.56px);
+}
+
+.aboutArrow img:last-child {
+  width: 1.15rem;
+  height: 2.1rem;
+  margin-left: -0.2rem;
+}
+
+.aboutPortrait {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  width: min(100%, 780px);
+  aspect-ratio: 4 / 3;
+  transform: rotate(9deg) translate(2%, 2%);
+  filter: drop-shadow(0 1.1rem 0.85rem rgb(25 22 15 / 20%));
+}
+
+.aboutPhoto,
+.aboutFrame {
+  position: absolute;
+  object-fit: cover;
+}
+
+.aboutPhoto {
+  z-index: 0;
+  top: 9%;
+  left: 26%;
+  width: 48%;
+  height: 64%;
+  object-position: center;
+}
+
+.aboutFrame {
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutDoodle {
+  position: absolute;
+  pointer-events: none;
+}
+
+.aboutCurl {
+  z-index: 2;
+  top: -1.5rem;
+  right: 38%;
+  width: clamp(5rem, 12vw, 10rem);
+  height: auto;
+  transform: rotate(13deg);
+}
+
+.aboutBlueCurl {
+  top: -2.9rem;
+  left: 0.15rem;
+  width: clamp(3.8rem, 6vw, 5.5rem);
+  height: auto;
+  transform: rotate(-10deg);
+}
+
+.aboutSparkle {
+  top: 12%;
+  left: 30%;
+  z-index: 1;
+  width: clamp(2.5rem, 4vw, 3.8rem);
+  height: clamp(2.66rem, 4.26vw, 4.05rem);
+}
+
+.aboutStar {
+  z-index: 2;
+  right: 39%;
+  bottom: 6%;
+  width: clamp(6rem, 13vw, 11rem);
+  height: auto;
+  transform: rotate(-7deg);
+}
+
+.aboutHeart {
+  z-index: 2;
+  top: 20%;
+  right: 5%;
+  width: clamp(4rem, 8vw, 6.5rem);
+  height: auto;
+  transform: rotate(10deg);
+}
+
+@media (max-width: 760px) {
+  .aboutPage {
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 0.75rem;
+    min-height: 100svh;
+    padding: 3.5rem 1.5rem 2.5rem;
+  }
+
+  .aboutCopy {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .aboutHeading {
+    margin-bottom: 1.75rem;
+  }
+
+  .aboutHeading h1 {
+    font-size: clamp(3rem, 14vw, 6.75rem);
+  }
+
+  .aboutBio {
+    max-width: 40rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    text-align: left;
+  }
+
+  .aboutLab {
+    margin-top: 1.75rem;
+  }
+
+  .aboutPortrait {
+    width: min(100%, 600px);
+    margin: -0.5rem 0 0;
+    transform: rotate(7deg) translateX(3%);
+  }
+
+  .aboutCurl {
+    top: 0.25rem;
+    right: 4%;
+    width: 4.75rem;
+  }
+
+  .aboutSparkle {
+    top: 8rem;
+    left: auto;
+    right: 4.5rem;
+    width: 2.5rem;
+    height: 2.66rem;
+  }
+
+  .aboutHeart {
+    top: auto;
+    right: 4%;
+    bottom: 14%;
+    width: 3.5rem;
+  }
+
+  .aboutStar {
+    right: auto;
+    bottom: 2%;
+    left: 5%;
+    width: 5.5rem;
+  }
+}
+
+.labPage {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background-color: #c5f8f2;
+  background-image: url("/images/lab/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.labTitle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  z-index: 2;
+}
+
+.labFlasks {
+  position: absolute;
+  z-index: 1;
+  inset-inline: 0;
+  bottom: clamp(0.5rem, 2.5vh, 1.75rem);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+  width: min(96vw, 1500px);
+  margin-inline: auto;
+}
+
+.labFlask {
+  position: relative;
+  display: block;
+  justify-self: center;
+  width: min(100%, 280px);
+  aspect-ratio: 4 / 5;
+  border-radius: 1rem;
+  transition: transform 180ms ease;
+}
+
+.labFlaskVisual {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.labFlaskImage,
+.labSmokeImage {
+  object-fit: contain;
+}
+
+.labFlaskImage {
+  z-index: 1;
+}
+
+.labSmokeImage {
+  z-index: 2;
+  opacity: 0;
+  clip-path: inset(0 0 58% 0);
+  transform: translateY(1.25rem) scale(0.94);
+  transform-origin: 50% 40%;
+  transition:
+    opacity 180ms ease,
+    transform 360ms cubic-bezier(0.2, 0.75, 0.35, 1);
+}
+
+.labFlask:hover,
+.labFlask:focus-visible {
+  transform: translateY(-0.5rem);
+}
+
+.labFlask:hover .labSmokeImage,
+.labFlask:focus-visible .labSmokeImage {
+  opacity: 1;
+  transform: translateY(-0.9rem) scale(1.04);
+  animation: labSmokeRise 1.5s ease-in-out 360ms infinite alternate;
+}
+
+.labFlask:focus-visible {
+  outline: 3px solid #17136d;
+  outline-offset: 0.2rem;
+}
+
+@keyframes labSmokeRise {
+  from {
+    transform: translateY(-0.7rem) scale(1.02);
+  }
+
+  to {
+    transform: translateY(-1.5rem) scale(1.07);
+  }
+}
+
+.sectionPage {
+  display: grid;
+  min-height: 100svh;
+  place-items: center;
+  padding: 2rem;
+  color: #17136d;
+  background-color: #c5f8f2;
+  background-image:
+    linear-gradient(rgb(207 251 245 / 42%), rgb(171 223 255 / 46%)),
+    url("/images/lab/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.sectionCard {
+  width: min(100%, 38rem);
+  padding: clamp(2rem, 7vw, 4.5rem);
+  border: 3px solid #17136d;
+  border-radius: 1.25rem;
+  background: rgb(255 255 255 / 88%);
+  box-shadow: 0.6rem 0.65rem 0 #b37bdd;
+  text-align: center;
+}
+
+.sectionEyebrow {
+  margin: 0 0 1rem;
+  color: #6641a0;
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.sectionCard h1 {
+  margin: 0;
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: clamp(2.75rem, 9vw, 5rem);
+  font-weight: 400;
+}
+
+.sectionCard > p:not(.sectionEyebrow) {
+  margin: 1.25rem 0 1.75rem;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.sectionBackLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.55rem 1.2rem;
+  border: 2px solid #17136d;
+  border-radius: 999px;
+  color: #17136d;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.sectionBackLink:hover,
+.sectionBackLink:focus-visible {
+  color: white;
+  background-color: #17136d;
+  transform: translateY(-2px);
+}
+
+.sectionBackLink:focus-visible {
+  outline: 3px solid #54afff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .labPage {
+    background-position: center;
+    background-size: auto 100%;
+  }
+
+  .labPage::before {
+    position: absolute;
+    z-index: 1;
+    top: 4%;
+    right: 0;
+    left: 0;
+    height: 24%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      #c5f8f2 25%,
+      #c5f8f2 75%,
+      transparent
+    );
+    content: "";
+    pointer-events: none;
+  }
+
+  .labTitle {
+    top: clamp(1.5rem, 7vh, 3.5rem);
+    left: 50%;
+    width: max-content;
+    height: auto;
+    padding: 0.4rem 0.8rem;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    border: 2px solid #17136d;
+    border-radius: 0.4rem;
+    background: rgb(244 237 255 / 94%);
+    box-shadow: 0.2rem 0.25rem 0 #b37bdd;
+    font-family: "SVN Comic", "Comic Sans MS", cursive;
+    font-size: clamp(1.1rem, 5vw, 1.65rem);
+    line-height: 1.2;
+    transform: translateX(-50%);
+  }
+
+  .labFlasks {
+    bottom: 2.5vh;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    row-gap: 0;
+    width: min(100vw, 32rem);
+  }
+
+  .labFlask {
+    width: min(100%, 140px);
+    grid-column: span 2;
+  }
+
+  .labFlask:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .labFlask:nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .labFlask,
+  .labSmokeImage,
+  .sectionBackLink {
+    transition: none;
+  }
+
+  .labFlask:hover .labSmokeImage,
+  .labFlask:focus-visible .labSmokeImage {
+    animation: none;
+  }
+}
