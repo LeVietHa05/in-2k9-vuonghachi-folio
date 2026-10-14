@@ -58,7 +58,11 @@ body {
       rgb(57 64 72 / 7%) 44px,
       transparent 46px
     ),
-    radial-gradient(ellipse at 12% 14%, rgb(255 255 255 / 85%), transparent 42%),
+    radial-gradient(
+      ellipse at 12% 14%,
+      rgb(255 255 255 / 85%),
+      transparent 42%
+    ),
     radial-gradient(ellipse at 89% 83%, rgb(232 230 219 / 24%), transparent 38%);
   isolation: isolate;
 }
@@ -546,5 +550,898 @@ body {
   .labFlask:hover .labSmokeImage,
   .labFlask:focus-visible .labSmokeImage {
     animation: none;
+  }
+}
+
+.artPage {
+  --art-ink: #17136d;
+  --art-purple: #3229a1;
+  --art-pink: #f54abc;
+  --art-blue: #54afff;
+  --art-yellow: #ffca22;
+  min-height: 100svh;
+  padding-bottom: 2.5rem;
+  color: white;
+  background: #25217b;
+}
+
+.artNavigation {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background: #25217b;
+}
+
+.artNavigationInner {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.8rem, 2.1vw, 2rem);
+  width: min(100%, 1200px);
+  min-height: 3.2rem;
+  margin-inline: auto;
+  padding: 0.4rem 1rem;
+}
+
+.artNavigationLink {
+  display: inline-flex;
+  align-items: center;
+  color: rgb(255 255 255 / 78%);
+  font-family: Georgia, serif;
+  font-size: clamp(0.55rem, 0.8vw, 0.76rem);
+  letter-spacing: 0.035em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.artNavigationLink:hover,
+.artNavigationLink:focus-visible,
+.artNavigationLink.isCurrent {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 0.28rem;
+}
+
+.artNavigationLink:focus-visible {
+  outline: 2px solid var(--art-yellow);
+  outline-offset: 0.2rem;
+}
+
+.artPageContent {
+  width: min(100% - 2rem, 1140px);
+  margin-inline: auto;
+}
+
+.artHero {
+  position: relative;
+  display: flex;
+  min-height: clamp(14rem, 29vw, 21rem);
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(1.5rem, 5vw, 3.75rem);
+  color: var(--art-ink);
+  background-color: #f9f7ef;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 0 8%,
+      rgb(237 93 133 / 36%) 8.1% 8.3%,
+      transparent 8.4%
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 1.7rem,
+      rgb(65 139 205 / 25%) 1.76rem,
+      transparent 1.82rem
+    );
+  transform: rotate(-2deg);
+}
+
+.artHeroCopy {
+  position: relative;
+  z-index: 2;
+  padding-left: 0.2rem;
+}
+
+.artEyebrow {
+  margin: 0 0 0.35rem;
+  color: #5646bd;
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: clamp(0.72rem, 1.2vw, 0.95rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.artHero h1 {
+  margin: 0;
+  color: #3931c4;
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: clamp(3rem, 7vw, 6.4rem);
+  font-weight: 400;
+  line-height: 0.93;
+}
+
+.artHeroSticker {
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  right: 8%;
+  width: clamp(8rem, 25vw, 20rem);
+  height: auto;
+  object-fit: contain;
+  transform: rotate(-6deg);
+}
+
+.artHeroStamp {
+  position: absolute;
+  top: 13%;
+  right: 4%;
+  padding: 0.25rem 0.5rem;
+  border: 2px dashed var(--art-ink);
+  color: var(--art-ink);
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: clamp(0.75rem, 1.5vw, 1.2rem);
+  transform: rotate(7deg);
+}
+
+.artPaperHole {
+  position: absolute;
+  left: 3%;
+  width: 0.85rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 0 1px 3px rgb(23 19 109 / 20%);
+}
+
+.artPaperHoleOne {
+  bottom: 14%;
+}
+
+.artPaperHoleTwo {
+  top: 23%;
+}
+
+.projectSection {
+  position: relative;
+  margin-top: 1.4rem;
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  color: var(--art-ink);
+  background-color: #faf9f3;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 0 8%,
+      rgb(237 93 133 / 33%) 8.1% 8.3%,
+      transparent 8.4%
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 1.75rem,
+      rgb(65 139 205 / 22%) 1.8rem,
+      transparent 1.86rem
+    );
+}
+
+.projectIntro {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(7rem, 29%);
+  align-items: center;
+  /* gap: clamp(1rem, 4vw, 3rem); */
+  padding-left: 4%;
+}
+
+.projectCopy {
+  max-width: 36rem;
+}
+
+.projectCopy h2,
+.personalArtIntro h2 {
+  margin: 0 0 0.65rem;
+  color: #3931c4;
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: clamp(1.6rem, 3.4vw, 2.65rem);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.projectDescription {
+  max-width: 36rem;
+  margin: 0;
+  color: #211d64;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  font-size: clamp(0.77rem, 1.3vw, 1.5rem);
+  line-height: 1.55;
+  text-align: justify;
+}
+
+.artAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2rem;
+  margin-top: 0.8rem;
+  padding: 0.35rem 1rem;
+  border: 1px solid #54afff;
+  border-radius: 999px;
+  color: #3931c4;
+  background: #c9edff;
+  font-family: "Super Crafty", Impact, sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.artAction:hover,
+.artAction:focus-visible {
+  color: white;
+  background: #3931c4;
+  transform: translateY(-2px);
+}
+
+.artAction:focus-visible {
+  outline: 3px solid var(--art-pink);
+  outline-offset: 2px;
+}
+
+.projectSticker,
+.projectWebinar {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 15rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.projectSticker img,
+.projectWebinar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.projectSticker {
+  /* transform: rotate(7deg); */
+}
+
+.projectWebinar {
+  aspect-ratio: 1.25;
+  transform: rotate(5deg);
+}
+
+.projectImageGrid {
+  display: grid;
+  gap: clamp(0.35rem, 1.2vw, 0.85rem);
+  margin-top: 1.1rem;
+  padding-left: 4%;
+  scroll-margin-top: 4rem;
+}
+
+.projectImageGrid-ijso {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.projectImageGrid-khkk {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  position: absolute;
+  max-width: 600px;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  transform: rotate(15deg);
+  gap: 4px;
+}
+
+.projectImageCard {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgb(23 19 109 / 16%);
+  transition: transform 180ms ease;
+}
+
+.projectImageCard:hover {
+  z-index: 3;
+  transform: translateY(-0.25rem) rotate(-1deg);
+}
+
+.projectImageGrid-ijso .projectImageCard {
+  aspect-ratio: 1;
+}
+
+.projectImageGrid-khkk .projectImageCard {
+  aspect-ratio: 1.15;
+}
+
+.projectImageCard img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.personalArt {
+  position: relative;
+  z-index: 0;
+  margin-top: 1.4rem;
+  padding: 0 0 2rem;
+  isolation: isolate;
+  overflow: hidden;
+  background: #25217b;
+  margin-top: 140px;
+}
+
+.personalArtIntro {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 0.2rem;
+  text-align: left;
+}
+
+.personalArtIntro h2 {
+  margin: 0 0 0.4rem;
+  color: var(--art-pink);
+  font-size: clamp(2.2rem, 5.2vw, 4rem);
+}
+
+.personalArtIntro > p:last-child {
+  max-width: 58rem;
+  margin: 0;
+  color: #fff;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.personalArtScene {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.personalArtSceneOne {
+  aspect-ratio: 1.05;
+}
+
+.personalArtPaper {
+  position: absolute;
+  z-index: 0;
+  inset: 1.5% 5% 1%;
+  background-color: #faf9f3;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 0 11%,
+      rgb(237 93 133 / 36%) 11.1% 11.35%,
+      transparent 11.5%
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 1.7rem,
+      rgb(65 139 205 / 24%) 1.76rem,
+      transparent 1.82rem
+    );
+  box-shadow: 0 4px 12px rgb(9 8 57 / 20%);
+  transform: rotate(3deg);
+}
+
+.personalArtPaper::after {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle, #fff 0 44%, #d7d6d2 53% 61%, transparent 67%) 1.4%
+      3% / 1.3rem 1.3rem no-repeat,
+    radial-gradient(circle, #fff 0 44%, #d7d6d2 53% 61%, transparent 67%) 1.4%
+      50% / 1.3rem 1.3rem no-repeat,
+    radial-gradient(circle, #fff 0 44%, #d7d6d2 53% 61%, transparent 67%) 1.4%
+      96% / 1.3rem 1.3rem no-repeat;
+  content: "";
+  pointer-events: none;
+}
+
+.personalArtNote {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  color: #25217b;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  font-size: 24px;
+  line-height: 1.38;
+}
+
+.personalArtNote h3 {
+  margin: 0 0 0.55em;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.personalArtNote p {
+  margin: 0 0 0.55em;
+  text-align: justify;
+}
+
+.personalArtDoucNote {
+  top: 7%;
+  right: 9%;
+  width: 39%;
+  transform: rotate(2deg);
+}
+
+.artworkCard {
+  position: absolute;
+  z-index: 2;
+  min-width: 0;
+  margin: 0;
+  padding: 0.55rem;
+  background: white;
+  box-shadow: 0 5px 14px rgb(23 19 109 / 18%);
+  transition: transform 180ms ease;
+}
+
+.artworkCard:hover {
+  z-index: 4;
+  transform: rotate(0deg) translateY(-0.25rem);
+}
+
+.artworkCardDouc {
+  top: 5%;
+  left: 9%;
+  width: 41%;
+  transform: rotate(-6deg);
+}
+
+.artworkCardSaola {
+  top: 52%;
+  left: 12%;
+  width: 37%;
+  transform: rotate(0deg);
+}
+
+.artworkCardFishingCat {
+  top: 51%;
+  right: 12%;
+  width: 37%;
+  transform: rotate(0deg);
+}
+
+.artworkCardLangur {
+  top: 8%;
+  left: 5%;
+  width: 42%;
+  transform: rotate(-5deg);
+}
+
+.artworkCardLoris {
+  top: 12%;
+  right: 6%;
+  width: 42%;
+  transform: rotate(5deg);
+}
+
+.artworkImage {
+  position: relative;
+  aspect-ratio: 1.08;
+  overflow: hidden;
+  background: #eeeaf6;
+}
+
+.artworkCardSaola .artworkImage,
+.artworkCardFishingCat .artworkImage,
+.artworkCardLangur .artworkImage,
+.artworkCardLoris .artworkImage {
+  aspect-ratio: 1;
+}
+
+.artworkImage img {
+  object-fit: cover;
+}
+
+.artworkCard figcaption {
+  display: grid;
+  gap: 0.2rem;
+  min-height: 2.8rem;
+  align-content: center;
+  padding: 0.4rem 0.5rem 0.3rem;
+  color: #211d64;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  text-align: center;
+}
+
+.artworkCard figcaption strong {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.artworkCard figcaption span {
+  color: #625b93;
+  font-size: clamp(0.63rem, 0.85vw, 0.75rem);
+}
+
+.personalArtSceneTwo {
+  aspect-ratio: 1.02;
+  margin-top: -3%;
+}
+
+.personalArtSceneTwo .personalArtPaper {
+  inset: 0 5% 1%;
+  transform: rotate(-3deg);
+}
+
+.personalArtMothNote {
+  top: 7%;
+  left: 9%;
+  width: 39%;
+  transform: rotate(-2deg);
+}
+
+.atlasMothPortrait {
+  position: absolute;
+  z-index: 2;
+  top: 6%;
+  right: 10%;
+  width: 36%;
+  height: 43%;
+  margin: 0;
+  padding: 0.55rem;
+  background: white;
+  box-shadow: 0 5px 14px rgb(23 19 109 / 20%);
+  transform: rotate(6deg);
+}
+
+.atlasMothPortrait img {
+  object-fit: cover;
+}
+
+.atlasMothDetails {
+  position: absolute;
+  z-index: 2;
+  top: 54%;
+  left: 9%;
+  display: flex;
+  gap: 0.35rem;
+  width: 38%;
+  height: 26%;
+  padding: 0.3rem;
+  background: white;
+}
+
+.atlasMothDetail {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.atlasMothDetail img {
+  object-fit: cover;
+}
+
+.personalArtMothCaption {
+  top: 65%;
+  right: 8%;
+  width: 39%;
+  transform: rotate(1deg);
+}
+
+.personalArtBlueDoodle {
+  position: absolute;
+  z-index: 3;
+  inset: 6% 6% 4% 4%;
+  border: 2px solid #32a8ff;
+  transform: rotate(-7deg);
+  pointer-events: none;
+}
+
+.personalArtSceneThree {
+  aspect-ratio: 1.9;
+  margin-top: -3%;
+}
+
+.personalArtSceneThree .personalArtPaper {
+  inset: 0 5% 3%;
+  transform: rotate(1deg);
+}
+
+.otterDiptych {
+  position: relative;
+  z-index: 2;
+  width: min(56%, 34rem);
+  margin: 4% auto 0;
+  padding: 0.55rem 0.55rem 0.85rem;
+  background: white;
+  box-shadow: 0 5px 14px rgb(23 19 109 / 20%);
+}
+
+.otterImagePair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.otterImagePair img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.otterDiptych figcaption {
+  padding-top: 0.65rem;
+  color: #211d64;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  text-align: center;
+}
+
+.artFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0.2rem 0;
+  font-family: "SVN Comic", "Comic Sans MS", cursive;
+  font-size: 0.9rem;
+}
+
+.artFooter a {
+  color: white;
+  text-decoration-color: var(--art-pink);
+  text-underline-offset: 0.2rem;
+}
+
+.artFooter a:hover,
+.artFooter a:focus-visible {
+  color: var(--art-yellow);
+}
+
+@media (max-width: 640px) {
+  .artPageContent {
+    width: min(100% - 1rem, 35rem);
+  }
+
+  .artNavigationInner {
+    justify-content: flex-start;
+    gap: 1rem;
+    min-height: 2.5rem;
+    overflow-x: auto;
+    padding-inline: 0.75rem;
+    scrollbar-width: none;
+  }
+
+  .artNavigationInner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .artNavigationLink {
+    font-size: 0.58rem;
+  }
+
+  .artHero {
+    min-height: 12rem;
+    padding: 1.25rem;
+  }
+
+  .artHero h1 {
+    font-size: clamp(2.4rem, 11vw, 4.4rem);
+  }
+
+  .artHeroSticker {
+    top: 20%;
+    right: 2%;
+    width: 32vw;
+  }
+
+  .artHeroStamp {
+    top: 8%;
+    right: 3%;
+  }
+
+  .artHeroCopy {
+    max-width: 82%;
+  }
+
+  .artHero h1 {
+    font-size: clamp(1.5rem, 8.5vw, 3.4rem);
+  }
+
+  .artHeroCopy .artEyebrow {
+    max-width: 11rem;
+    font-size: 0.63rem;
+  }
+
+  .projectSection {
+    margin-top: 0.7rem;
+    padding: 1rem 0.65rem 0.8rem;
+  }
+
+  .projectIntro {
+    grid-template-columns: minmax(0, 1fr) minmax(4.3rem, 27%);
+    gap: 0.5rem;
+    padding-left: 7%;
+  }
+
+  .projectCopy h2 {
+    font-size: clamp(1.25rem, 5.6vw, 2rem);
+  }
+
+  .projectDescription {
+    font-size: 0.69rem;
+    line-height: 1.45;
+  }
+
+  .projectSticker,
+  .projectWebinar {
+    max-width: 100%;
+  }
+
+  .projectImageGrid {
+    margin-top: 0.75rem;
+    padding-left: 7%;
+  }
+
+  .projectImageGrid-ijso {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.2rem;
+  }
+
+  .projectImageGrid-khkk {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+
+  .projectImageGrid-khkk .projectImageCard {
+    aspect-ratio: 1.12;
+  }
+
+  .projectImageCard {
+    border-width: 2px;
+  }
+
+  .artAction {
+    min-height: 1.7rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.66rem;
+  }
+
+  .personalArt {
+    margin-top: 0.7rem;
+    padding: 0 0 1.1rem;
+  }
+
+  .personalArtIntro {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
+  .personalArtIntro h2 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+  }
+
+  .personalArtIntro > p:last-child {
+    font-size: clamp(0.68rem, 2.5vw, 0.85rem);
+  }
+
+  .personalArtSceneOne {
+    aspect-ratio: 0.94;
+  }
+
+  .personalArtSceneTwo {
+    aspect-ratio: 0.91;
+  }
+
+  .personalArtSceneThree {
+    aspect-ratio: 1.25;
+  }
+
+  .artworkCard {
+    padding: 0.3rem;
+  }
+
+  .artworkCardDouc {
+    left: 8%;
+    width: 43%;
+  }
+
+  .artworkCardSaola {
+    top: 54%;
+    left: 7%;
+    width: 41%;
+  }
+
+  .artworkCardFishingCat {
+    top: 56%;
+    right: 7%;
+    width: 41%;
+  }
+
+  .artworkCardLangur {
+    left: 4%;
+    width: 43%;
+  }
+
+  .artworkCardLoris {
+    right: 5%;
+    width: 43%;
+  }
+
+  .artworkCard figcaption {
+    min-height: 2.35rem;
+    padding: 0.25rem 0.1rem;
+  }
+
+  .artworkCard figcaption strong {
+    font-size: 0.67rem;
+  }
+
+  .artworkCard figcaption span {
+    font-size: 0.54rem;
+  }
+
+  .personalArtDoucNote {
+    top: 7%;
+    right: 8%;
+    width: 38%;
+  }
+
+  .personalArtMothNote {
+    left: 8%;
+    width: 40%;
+  }
+
+  .atlasMothPortrait {
+    right: 8%;
+    width: 37%;
+    height: 41%;
+    padding: 0.3rem;
+  }
+
+  .atlasMothDetails {
+    left: 8%;
+    width: 39%;
+    height: 23%;
+    padding: 0.2rem;
+  }
+
+  .personalArtMothCaption {
+    right: 8%;
+    width: 38%;
+  }
+
+  .personalArtBlueDoodle {
+    border-width: 1.5px;
+  }
+
+  .otterDiptych {
+    width: 64%;
+    margin-top: 5%;
+    padding: 0.3rem 0.3rem 0.55rem;
+  }
+
+  .otterDiptych figcaption {
+    font-size: 0.75rem;
+  }
+
+  .artFooter {
+    font-size: 0.72rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projectImageCard,
+  .artAction,
+  .artworkCard {
+    transition: none;
   }
 }
