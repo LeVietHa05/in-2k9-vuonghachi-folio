@@ -68,7 +68,7 @@ export default function TeachingPage() {
           />
 
           <PaperSheet className="left-[4%] top-[59%] h-[39%] w-[92%] rotate-[3deg]" />
-          <p className="absolute left-[15%] top-[58%] z-10 w-[44%] text-[21px] leading-[1.5] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive] rotate-[3deg]">
+          <p className="absolute left-[15%] top-[58%] z-10 w-[44%] text-[21`px] leading-[1.5] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive] rotate-[3deg]">
             The program was delivered at 4 secondary schools, reaching 100+
             students through interactive lessons and hands-on experiments. The
             students especially enjoyed making their own butter out of whipping
