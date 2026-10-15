@@ -25,6 +25,46 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.research-paper {
+  background-color: #faf9f3;
+  background-image:
+    radial-gradient(
+        circle,
+        #fff 0 43%,
+        #d7d6d2 51% 60%,
+        transparent 67%
+      )
+      1.5% 8% / 1.1rem 1.1rem no-repeat,
+    radial-gradient(
+        circle,
+        #fff 0 43%,
+        #d7d6d2 51% 60%,
+        transparent 67%
+      )
+      1.5% 50% / 1.1rem 1.1rem no-repeat,
+    radial-gradient(
+        circle,
+        #fff 0 43%,
+        #d7d6d2 51% 60%,
+        transparent 67%
+      )
+      1.5% 92% / 1.1rem 1.1rem no-repeat,
+    linear-gradient(
+      90deg,
+      transparent 0 10%,
+      rgb(237 93 133 / 36%) 10.1% 10.35%,
+      transparent 10.5%
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 1.7rem,
+      rgb(65 139 205 / 24%) 1.76rem,
+      transparent 1.82rem
+    );
+  box-shadow: 0 5px 16px rgb(10 8 64 / 24%);
+}
+
 @font-face {
   font-family: "Super Crafty";
   src: url("/Super%20Crafty.ttf") format("truetype");
