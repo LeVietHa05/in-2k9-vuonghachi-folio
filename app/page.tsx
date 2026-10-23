@@ -6,17 +6,19 @@ import Link from "next/link";
 export default function Home() {
   const [clicked, setClicked] = useState(false);
   return (
-    <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="relative flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black aspect-[1440/808]">
       {!clicked && (
         <Image
           src={"/1.png"}
           onClick={() => setClicked(true)}
-          fill
+          width={1920}
+          height={720}
           alt=""
+          className="aspect-[1440/808]"
         ></Image>
       )}
       {clicked && (
-        <main className="aboutPage">
+        <main className="aboutPage aspect-[1440/808]">
           <Image
             className="aboutDoodle aboutCurl"
             src="/images/doodles/about-01.svg"
@@ -27,7 +29,7 @@ export default function Home() {
           />
           <Image
             className="aboutDoodle aboutSparkle"
-            src="/images/doodles/about-04.svg"
+            src="/images/doodles/about-03.svg"
             width={61}
             height={65}
             alt=""
@@ -40,17 +42,24 @@ export default function Home() {
             height={189}
             alt=""
             aria-hidden="true"
+            style={{
+              right: "34%",
+              bottom: "14%",
+            }}
           />
           <Image
             className="aboutDoodle aboutHeart"
-            src="/images/doodles/about-03.svg"
+            src="/images/doodles/about-04.svg"
             width={106}
             height={104}
             alt=""
             aria-hidden="true"
           />
 
-          <section className="aboutCopy" aria-labelledby="about-title">
+          <section
+            className="aboutCopy aspect-[1440/808]"
+            aria-labelledby="about-title"
+          >
             <div className="aboutHeading">
               <Image
                 className="aboutDoodle aboutBlueCurl"
@@ -118,6 +127,20 @@ export default function Home() {
               height={600}
               alt=""
               aria-hidden="true"
+            />
+            <Image
+              className=" z-0  "
+              src="/images/intro/polaroid-frame.png"
+              width={800}
+              height={600}
+              alt=""
+              aria-hidden="true"
+              style={{
+                position: 'relative',
+                right: "-2%",
+                bottom: "-4%",
+                objectFit: 'initial'
+              }}
             />
           </div>
         </main>

@@ -7,30 +7,35 @@ const flasks = [
     href: "/art",
     image: "/images/lab/flask-art.png",
     smoke: "/images/lab/smoke.png",
+    transform: "translateY(-12rem) ",
   },
   {
     name: "Science Research",
     href: "/science-research",
     image: "/images/lab/flask-science-research.png",
-    smoke: "/images/lab/flask-science-research-smoking.png",
+    smoke: "/images/lab/smoke.png",
+    transform: "translateY(-10rem) ",
   },
   {
     name: "Music",
     href: "/music",
     image: "/images/lab/flask-music.png",
     smoke: "/images/lab/smoke.png",
+    transform: "translateY(-12rem) ",
   },
   {
     name: "Foreign Exchange",
     href: "/foreign-exchange",
     image: "/images/lab/flask-foreign-exchange.png",
-    smoke: "/images/lab/beaker-smoke.png",
+    smoke: "/images/lab/smoke.png",
+    transform: "translateY(-10rem) ",
   },
   {
     name: "Teaching",
     href: "/teaching",
     image: "/images/lab/flask-teaching.png",
     smoke: "/images/lab/smoke.png",
+    transform: "translateY(-12rem) ",
   },
 ];
 
@@ -43,31 +48,37 @@ export default function Lab() {
 
       <nav className="labFlasks" aria-label="Explore Chi’s interests">
         {flasks.map((flask) => (
-          <Link
-            className="labFlask"
-            href={flask.href}
-            key={flask.name}
-            aria-label={`Explore ${flask.name}`}
-          >
-            <span className="labFlaskVisual">
-              <Image
-                className="labFlaskImage"
-                src={flask.image}
-                alt=""
-                fill
-                sizes="(max-width: 640px) 27vw, 20vw"
-              />
-              <Image
-                className="labSmokeImage"
-                src={flask.smoke}
-                alt=""
-                fill
-                sizes="(max-width: 640px) 27vw, 20vw"
-                aria-hidden="true"
-              />
-            </span>
-            <span className="sr-only">{flask.name}</span>
-          </Link>
+          <div className="labFlask" key={flask.name}>
+            <Link
+              className="labFlask"
+              href={flask.href}
+              key={flask.name}
+              aria-label={`Explore ${flask.name}`}
+            >
+              <span className="labFlaskVisual">
+                <Image
+                  className="labFlaskImage"
+                  src={flask.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 27vw, 40vw"
+                />
+                <Image
+                  className="labSmokeImage"
+                  src={"/images/lab/smoke 1.png"}
+                  alt=""
+                  width={282}
+                  height={288}
+                  aria-hidden="true"
+                  style={{
+                    maxWidth: "100%",
+                    transform: flask.transform,
+                  }}
+                />
+              </span>
+              <span className="sr-only">{flask.name}</span>
+            </Link>
+          </div>
         ))}
       </nav>
     </main>
