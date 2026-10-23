@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArtNavigation } from "./_components/art-navigation";
 import { PersonalArtGallery } from "./_components/personal-art-gallery";
 import { ProjectSection } from "./_components/project-section";
+import { Footer } from "./_components/footer";
 
 export const metadata: Metadata = {
   title: "Art & Design | Vuong Ha Chi",
@@ -72,10 +73,10 @@ const khkkPosts = [
 
 export default function ArtPage() {
   return (
-    <main className="artPage" id="art-top">
+    <main className="artPage">
       <ArtNavigation />
 
-      <div className="artPageContent">
+      <div className="artPageContent" id="top">
         <header className="artHero rotate">
           <div className="artHeroCopy">
             <p className="artEyebrow">A little color, a little curiosity</p>
@@ -127,6 +128,7 @@ export default function ArtPage() {
         />
 
         <PersonalArtGallery />
+        <Footer />
       </div>
     </main>
   );

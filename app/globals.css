@@ -26,14 +26,14 @@ body {
 }
 
 .research-paper {
-  background-color: #faf9f3;
+  background-color: #faf9f3; 
   background-image:
-    radial-gradient(circle, #fff 0 43%, #d7d6d2 51% 60%, transparent 67%) 1.5%
+    /* radial-gradient(circle, #fff 0 43%, #d7d6d2 51% 60%, transparent 67%) 1.5%
       8% / 1.1rem 1.1rem no-repeat,
     radial-gradient(circle, #fff 0 43%, #d7d6d2 51% 60%, transparent 67%) 1.5%
       50% / 1.1rem 1.1rem no-repeat,
     radial-gradient(circle, #fff 0 43%, #d7d6d2 51% 60%, transparent 67%) 1.5%
-      92% / 1.1rem 1.1rem no-repeat,
+      92% / 1.1rem 1.1rem no-repeat, */ 
     linear-gradient(
       90deg,
       transparent 0 10%,
@@ -585,7 +585,7 @@ body {
   align-items: center;
   color: rgb(255 255 255 / 78%);
   font-family: Georgia, serif;
-  font-size: clamp(0.55rem, 0.8vw, 0.76rem);
+  font-size: 18px;
   letter-spacing: 0.035em;
   text-decoration: none;
   text-transform: uppercase;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArtNavigation } from "../art/_components/art-navigation";
+import { Footer } from "../art/_components/footer";
 import { ResearchImage } from "../science-research/_components/research-image";
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export default function TeachingPage() {
           </h1>
 
           <PaperSheet className="left-[4%] top-[14%] h-[42%] w-[92%] -rotate-[2.5deg]" />
-          <p className="absolute left-[12%] top-[14%] z-10 w-[78%] text-[23px]   text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]  -rotate-[2.5deg]">
+          <p className="absolute left-[14%] top-[14%] z-10 w-[78%] text-[23px]   text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]  -rotate-[2.5deg]">
             Wanting to introduce younger students to the fascinating world of
             Food Science, I developed a 3-lesson course that explored nutrition,
             food packaging, and food chemistry. I adapted the curriculum and
@@ -68,7 +69,7 @@ export default function TeachingPage() {
           />
 
           <PaperSheet className="left-[4%] top-[59%] h-[39%] w-[92%] rotate-[3deg]" />
-          <p className="absolute left-[15%] top-[58%] z-10 w-[44%] text-[21`px] leading-[1.5] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive] rotate-[3deg]">
+          <p className="absolute left-[15%] top-[59%] z-10 w-[44%] text-[21px] leading-[1.4] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive] rotate-[3deg]">
             The program was delivered at 4 secondary schools, reaching 100+
             students through interactive lessons and hands-on experiments. The
             students especially enjoyed making their own butter out of whipping
@@ -109,10 +110,12 @@ export default function TeachingPage() {
           >
             Khoa học không khó at N-Tech
           </h2>
-          <p className="absolute left-[14%] top-[23%] z-10 w-[41%] text-[clamp(0.7rem,0.95vw,0.9rem)] leading-[1.8] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-            Aenean lacinia bibendum nulla sed consectetur.
+          <p className="absolute left-[17%] top-[23%] z-10 w-[30%] text-[23px] leading-[1.4] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
+            I was one of the two co-hosts for the “Khoa học Không Khó” (my
+            science-teaching club) interactive booth at the school’s STEM fair.
+            We amazed the students with color-changing liquids (Potassium
+            Permanganate mixed with a Sodium Hydroxide - Sucrose solution!), gas
+            cannons, and other experiments students can do themselves.
           </p>
 
           <ResearchImage
@@ -145,20 +148,7 @@ export default function TeachingPage() {
           />
         </section>
 
-        <footer className="relative z-20 flex justify-between px-2 pt-6 text-sm [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
-          <a
-            className="underline underline-offset-4 hover:text-[#67baff]"
-            href="/art"
-          >
-            Back to Art &amp; Design
-          </a>
-          <a
-            className="underline underline-offset-4 hover:text-[#67baff]"
-            href="/lab"
-          >
-            Back to the lab
-          </a>
-        </footer>
+        <Footer />
       </div>
     </main>
   );

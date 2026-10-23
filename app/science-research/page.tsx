@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { ArtNavigation } from "../art/_components/art-navigation";
+import { Footer } from "../art/_components/footer";
 import { ResearchImage } from "./_components/research-image";
 
 export const metadata: Metadata = {
@@ -65,8 +66,8 @@ export default function ScienceResearchPage() {
           </ProjectHeading>
 
           <div className="relative h-[760px]">
-            <ResearchPaper className="right-[5%] top-[9%] h-[73%] w-[63%] rotate-[5deg] px-[8%] py-[5%]">
-              <ul className="relative z-[1] ml-[8%] list-disc space-y-2 text-[20px]  text-justify">
+            <ResearchPaper className="right-[5%] top-[9%] h-[73%] w-[63%] rotate-[5deg] pl-[8%] pr-[2%] pt-[2%] pb-[5%]">
+              <ul className="relative z-[1] ml-[8%] list-disc space-y-2 text-[24px] leading-8  text-justify">
                 <li>
                   What started as a YouTube experiment quickly became a real
                   research project. I first tried making bioplastic from cassava
@@ -241,7 +242,7 @@ export default function ScienceResearchPage() {
             className="relative h-[1040px]"
           >
             <ResearchPaper className="left-[6%] top-[4%] h-[89%] w-[86%] -rotate-[4deg]">
-              <ul className="absolute left-[11%] top-[9%] w-[78%] list-disc space-y-5 text-[21px] text-justify">
+              <ul className="absolute left-[13%] top-[3%] w-[80%] list-disc space-y-5 text-[24px] text-justify">
                 <li>
                   As part of a four-member summer research team at Hanoi
                   University of Pharmacy, I investigated Senna timoriensis, a
@@ -333,20 +334,7 @@ export default function ScienceResearchPage() {
           </section>
         </section>
 
-        <footer className="relative z-20 flex justify-between px-2 pt-6 text-sm [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
-          <a
-            className="underline underline-offset-4 hover:text-[#67baff]"
-            href="/art"
-          >
-            Back to Art &amp; Design
-          </a>
-          <a
-            className="underline underline-offset-4 hover:text-[#67baff]"
-            href="/lab"
-          >
-            Back to the lab
-          </a>
-        </footer>
+        <Footer />
       </div>
     </main>
   );

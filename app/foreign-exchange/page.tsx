@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArtNavigation } from "../art/_components/art-navigation";
+import { Footer } from "../art/_components/footer";
 import { ResearchImage } from "../science-research/_components/research-image";
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ function PaperSheet({ className }: { className: string }) {
 
 export default function ForeignExchangePage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#25217b] pb-14 text-white text-justify">
+    <main id="top" className="min-h-screen overflow-hidden bg-[#25217b] pb-14 text-white text-justify">
       <ArtNavigation currentHref="/foreign-exchange" />
 
       <div className="mx-auto w-[min(100%-2rem,1140px)]">
@@ -31,7 +32,7 @@ export default function ForeignExchangePage() {
           className="relative h-[clamp(1180px,145vw,1580px)]"
         >
           <h1
-            className="absolute left-[8%] top-[5%] z-20 max-w-[65%] text-[clamp(2rem,4.1vw,3.7rem)] leading-[1.18] font-normal text-[#b9edff]   [font-family:'Super_Crafty',Impact,sans-serif] uppercase"
+            className="absolute left-[8%] top-[5%] z-20 max-w-[65%] text-[clamp(2rem,4.1vw,3.7rem)] leading-[1.18] font-normal text-[#b9edff]   [font-family:'Super_Crafty',Impact,sans-serif] uppercase text-left"
             id="apyls-title"
           >
             Asia-Pacific Young Leaders Summit (2026)
@@ -49,7 +50,7 @@ export default function ForeignExchangePage() {
           <h2 className="absolute left-[14%] top-[37%] z-10 text-[52px] leading-tight font-normal text-[#3931c4] [font-family:'SVN_Comic','Comic_Sans_MS',cursive] rotate-[2deg]">
             Presentation
           </h2>
-          <p className="absolute left-[14%] top-[42%] z-10 w-[43%] text-[26px] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive] rotate-[2deg]">
+          <p className="absolute left-[13%] top-[42%] z-10 w-[43%] text-[26px] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive] rotate-[2deg]">
             Working with an international team, I co-developed an AI skills
             resource platform supporting SDG 8, bringing together crowdsourced
             learning resources, AI-linked job listings, and translation tools to
@@ -117,18 +118,18 @@ export default function ForeignExchangePage() {
           </a>
 
           <PaperSheet className="left-[5%] top-[21%] h-[29%] w-[79%] rotate-[-0.5deg]" />
-          <p className="absolute left-[14%] top-[24%] z-10 w-[54%] text-[24px] leading-[1.9] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
+          <p className="absolute left-[14%] top-[24%] z-10 w-[45%] text-[24px] leading-[1.9] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
             I was selected as one of three from 3,000 students at Newton Grammar
             School to join 51 delegates from 17 countries as the Vietnamese
             delegates
           </p>
           <h3
-            className="absolute left-[13%] top-[32%] z-10 text-[52px] leading-tight font-normal text-[#3931c4] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]"
+            className="absolute left-[14%] top-[32%] z-10 text-[52px] leading-tight font-normal text-[#3931c4] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]"
             id="wsif-presentation"
           >
             Presentation
           </h3>
-          <p className="absolute left-[13%] top-[35%] z-10 w-[48%] text-[24px]  text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
+          <p className="absolute left-[14%] top-[35%] z-10 w-[47%] text-[24px]  text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
             During the program, I co-led a group of five students from different
             countries to discuss the ethical and efficient use of AI, and
             presented it to others.
@@ -187,20 +188,7 @@ export default function ForeignExchangePage() {
           />
         </section>
 
-        <footer className="relative z-20 flex justify-between px-2 pt-6 text-sm [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
-          <a
-            className="underline underline-offset-4 hover:text-[#67baff]"
-            href="/art"
-          >
-            Back to Art &amp; Design
-          </a>
-          <a
-            className="underline underline-offset-4 hover:text-[#67baff]"
-            href="/lab"
-          >
-            Back to the lab
-          </a>
-        </footer>
+        <Footer />
       </div>
     </main>
   );

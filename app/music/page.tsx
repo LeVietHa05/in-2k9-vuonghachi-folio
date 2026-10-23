@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArtNavigation } from "../art/_components/art-navigation";
 import { ResearchImage } from "../science-research/_components/research-image";
+import { Footer } from "../art/_components/footer";
 
 export const metadata: Metadata = {
   title: "Music | Vuong Ha Chi",
@@ -20,6 +21,7 @@ export default function MusicPage() {
 
       <div className="mx-auto w-[min(100%-2rem,1140px)]">
         <section
+          id="top"
           aria-label="Music performances"
           className="relative h-[2200px] max-[640px]:h-[1280px]"
         >
@@ -32,8 +34,12 @@ export default function MusicPage() {
               sizes="(max-width: 640px) 80vw, 900px"
               src="/images/shared/paper-crumpled.png"
             />
-            <p className="absolute left-[46%] top-[17%] w-[48%] text-[28px] leading-[1.5] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
-              Intro ngắn trên cùng: [Khoảng 4-5 câu, chưa viết]. Thêm ảnh ngày đầu tập đàn (file Day 1jpg)
+            <p className="absolute left-[46%] top-[17%] w-[48%] text-[clamp(20px,2vw,26px)] leading-[1.5] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
+              I love Vietnamese culture. I love the elegance of string
+              instruments. So ever since getting to know the đàn nhị in 6th
+              grade, I knew it was perfect for me. I love introducing others to
+              my culture through folk music, but I especially enjoy playing rock
+              music on it—it always gives people a pleasant surprise!
             </p>
           </div>
 
@@ -123,7 +129,7 @@ Pacific Young Leaders Summit"
             className="left-[2%] top-[74%] w-[50%] rotate-[4deg]"
             frameClassName="!p-[11px]"
             imageContainerClassName="aspect-[1.68]"
-            src={musicImage("family-day.png")}
+            src={musicImage("family-day-new.png")}
           />
           <ResearchImage
             alt="Performing at the School Cluster 7 student instrument talent competition"
@@ -144,6 +150,8 @@ Pacific Young Leaders Summit"
             src={musicImage("parents-meeting.png")}
           />
         </section>
+
+        <Footer />
       </div>
     </main>
   );
