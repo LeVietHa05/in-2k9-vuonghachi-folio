@@ -51,22 +51,32 @@ export function ProjectSection({
                 : {})}
             >
               {actionLabel}
-              <span aria-hidden="true">↗</span>
             </a>
+          ) : (
+            ""
+          )}
+          {variant !== "ijso" ? (
+            <Image
+              src={"/images/doodles/art-design-02.svg"}
+              alt=""
+              width={151}
+              height={154}
+              className="absolute -bottom-30 -left-30"
+            ></Image>
           ) : (
             ""
           )}
         </div>
 
         {variant === "ijso" ? (
-          <div className="projectSticker" aria-hidden="true">
+          <div className="flex items-center" aria-hidden="true">
             <div>
               <Image
                 src="/images/art-design/wsif-stickers/sticker-03.png"
                 alt=""
-                width={2469}
-                height={1975}
-                sizes="(max-width: 640px) 25vw, 180px"
+                width={287}
+                height={291}
+                className="scale-200 relative -top-20"
               />
               <a
                 className="artAction"
@@ -76,15 +86,14 @@ export function ProjectSection({
                   : {})}
               >
                 {actionLabel}
-                <span aria-hidden="true">↗</span>
               </a>
             </div>
             <Image
-              src="/images/art-design/wsif-stickers/sticker-02.png"
+              src="/images/art-design/wsif-stickers/sticker-02-new.png"
               alt=""
-              width={2469}
-              height={1975}
-              sizes="(max-width: 640px) 25vw, 180px"
+              width={416}
+              height={495}
+              className="  relative -top-20"
             />
           </div>
         ) : (

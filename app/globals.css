@@ -70,7 +70,7 @@ body {
   grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
   align-items: center;
   width: 100%;
-  /* min-height: 100svh; */ 
+  /* min-height: 100svh; */
   overflow: hidden;
   padding: clamp(2.5rem, 6vw, 5.75rem) clamp(1.5rem, 6.2vw, 5.5rem);
   color: var(--ink);
@@ -369,7 +369,7 @@ body {
   width: min(100%, 280px);
   aspect-ratio: 4 / 5;
   border-radius: 1rem;
-  transition: transform 180ms ease; 
+  transition: transform 180ms ease;
 }
 
 .labFlaskVisual {
@@ -383,15 +383,15 @@ body {
   z-index: 2;
 }
 
-.labSmokeImage { 
+.labSmokeImage {
   object-position: center;
   z-index: 1;
   opacity: 0;
-  width: 300px;  
+  width: 300px;
   /* clip-path: inset(0 0 58% 0); */
   /* transform: translateY(-5rem) scale(0.94);  */
   /* transform-origin: 50% 40%; */
-  transition: 
+  transition:
     opacity 180ms ease,
     transform 360ms cubic-bezier(0.2, 0.75, 0.35, 1);
 }
@@ -664,11 +664,8 @@ body {
   position: absolute;
   z-index: 1;
   top: 3%;
-  right: 8%;
-  width: clamp(8rem, 25vw, 20rem);
-  height: auto;
+  right: 2%;
   object-fit: contain;
-  transform: rotate(-6deg);
 }
 
 .artHeroStamp {
@@ -726,7 +723,7 @@ body {
 .projectIntro {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(7rem, 29%);
+  grid-template-columns: minmax(32rem, 60%) minmax(0, 1fr);
   align-items: center;
   /* gap: clamp(1rem, 4vw, 3rem); */
   padding-left: 4%;
@@ -750,11 +747,12 @@ body {
 .projectDescription {
   max-width: 36rem;
   margin: 0;
-  color: #211d64;
+  margin-left: 0.5rem;
+  color: #231e83;
   font-family: "SVN Comic", "Comic Sans MS", cursive;
-  font-size: clamp(0.77rem, 1.3vw, 1.5rem);
-  line-height: 1.55;
+  font-size: 24px;
   text-align: justify;
+  line-height: 1.2;
 }
 
 .artAction {
@@ -770,7 +768,7 @@ body {
   background: #c9edff;
   font-family: "Super Crafty", Impact, sans-serif;
   font-size: 1.5rem;
-  text-decoration: none;
+  text-decoration: underline;
   text-transform: uppercase;
   transition:
     color 160ms ease,
@@ -796,7 +794,7 @@ body {
   justify-self: center;
   width: 100%;
   max-width: 15rem;
-  aspect-ratio: 1;
+  /* aspect-ratio: 1; */
   display: flex;
   flex-direction: row;
 }
@@ -954,6 +952,7 @@ body {
   position: absolute;
   z-index: 1;
   margin: 0;
+  margin-left: 3.8rem;
   color: #25217b;
   font-family: "SVN Comic", "Comic Sans MS", cursive;
   font-size: 24px;
@@ -996,7 +995,7 @@ body {
 
 .artworkCardDouc {
   top: 5%;
-  left: 9%;
+  left: 5%;
   width: 41%;
   transform: rotate(-6deg);
 }
@@ -1082,14 +1081,14 @@ body {
   top: 7%;
   left: 9%;
   width: 39%;
-  transform: rotate(-2deg);
+  transform: rotate(-3deg);
 }
 
 .atlasMothPortrait {
   position: absolute;
   z-index: 2;
   top: 6%;
-  right: 10%;
+  right: 5%;
   width: 36%;
   height: 43%;
   margin: 0;
@@ -1107,7 +1106,7 @@ body {
   position: absolute;
   z-index: 2;
   top: 54%;
-  left: 9%;
+  left: 16%;
   display: flex;
   gap: 0.35rem;
   width: 38%;
@@ -1128,7 +1127,7 @@ body {
 
 .personalArtMothCaption {
   top: 65%;
-  right: 8%;
+  right: 6%;
   width: 39%;
   transform: rotate(1deg);
 }
@@ -1264,18 +1263,12 @@ body {
   }
 
   .projectIntro {
-    grid-template-columns: minmax(0, 1fr) minmax(4.3rem, 27%);
     gap: 0.5rem;
     padding-left: 7%;
   }
 
   .projectCopy h2 {
     font-size: clamp(1.25rem, 5.6vw, 2rem);
-  }
-
-  .projectDescription {
-    font-size: 0.69rem;
-    line-height: 1.45;
   }
 
   .projectSticker,

@@ -80,10 +80,10 @@ export function PersonalArtGallery() {
             Threatened Species.
           </p>
           <p>
-            Description: &ldquo;Bướm khế&ldquo; in Vietnamese translates to Starfruit
-            butterfly. The species got this name because it frequently lays eggs
-            and develops on starfruit trees. This is the main inspiration behind
-            her outfit!
+            Description: &ldquo;Bướm khế&ldquo; in Vietnamese translates to
+            Starfruit butterfly. The species got this name because it frequently
+            lays eggs and develops on starfruit trees. This is the main
+            inspiration behind her outfit!
           </p>
         </div>
         <figure className="atlasMothPortrait">
@@ -113,9 +113,12 @@ export function PersonalArtGallery() {
           </div>
         </div>
         <p className="personalArtNote personalArtMothCaption">
-          Modernized <span className="text-red-600">&ldquo;Nhật bình&ldquo;</span>,  a traditional Vietnamese attire associated with the noble women of the Nguyen dynasty, with a pattern featuring the moth &ldquo;holding up the sky&ldquo;, and a starfuit blossom-colored skirt
+          Modernized{" "}
+          <span className="text-red-600">&ldquo;Nhật bình&ldquo;</span>, a
+          traditional Vietnamese attire associated with the noble women of the
+          Nguyen dynasty, with a pattern featuring the moth &ldquo;holding up
+          the sky&ldquo;, and a starfuit blossom-colored skirt
         </p>
-        <div className="personalArtBlueDoodle" aria-hidden="true" />
       </div>
 
       <div className="personalArtScene personalArtSceneThree">
@@ -129,6 +132,7 @@ export function PersonalArtGallery() {
         />
         <ArtCard
           className="artworkCardLoris"
+          content="The slow loris"
           src="/images/art-design/personal-art/slow-loris.png"
           alt="Illustration of a slow loris"
         />
@@ -151,7 +155,7 @@ export function PersonalArtGallery() {
             sizes="(max-width: 640px) 42vw, 20vw"
           />
         </div>
-        <figcaption>Lorem ipsum dolor sit amet</figcaption>
+        <figcaption>Save the Asian small-clawed otter!</figcaption>
       </figure>
     </section>
   );

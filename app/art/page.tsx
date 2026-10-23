@@ -89,9 +89,8 @@ export default function ArtPage() {
             className="artHeroSticker"
             src="/images/art-design/wsif-stickers/sticker-01.png"
             alt="Hand-drawn character wearing a Vietnamese flag"
-            width={2469}
-            height={1975}
-            sizes="(max-width: 640px) 32vw, 300px"
+            width={417}
+            height={330}
           />
           {/* <span className="artHeroStamp" aria-hidden="true">
             WSIF ’25
@@ -116,7 +115,8 @@ export default function ArtPage() {
           id="khkk-project"
           eyebrow=" "
           title="A Guide to the IJSO"
-          description="<ul  style='list-style-type: disc; margin-left: 12px;'> <li>Co-founder, Head Designer at “Khoa học Không Khó”,</li> <li>a Science-teaching club providing free science courses and webinars for middle schoolers
+          description="<ul 
+           style='list-style-type: disc; margin-left: 12px; max-width: 28rem'> <li>Co-founder, Head Designer at “Khoa học Không Khó”,</li> <li>a Science-teaching club providing free science courses and webinars for middle schoolers
           </li></ul> 
 "
           images={khkkPosts}
@@ -127,11 +127,6 @@ export default function ArtPage() {
         />
 
         <PersonalArtGallery />
-
-        <footer className="artFooter">
-          <a href="#art-top">Back to the top ↑</a>
-          <a href="/lab">Back to Chi’s lab</a>
-        </footer>
       </div>
     </main>
   );
