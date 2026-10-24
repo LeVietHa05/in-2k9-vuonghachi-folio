@@ -39,7 +39,7 @@ export function ResearchImage({
       </div>
       {caption ? (
         <figcaption
-          className={`px-1.5 py-2 text-center leading-snug text-[#25217b] ${captionClassName || "font-[family-name:var(--font-geist-sans)] text-[clamp(0.55rem,0.8vw,0.76rem)]"}`}
+          className={`px-1.5 py-2 text-center leading-snug text-[#25217b] ${captionClassName || "font-[family-name:var(--font-geist-sans)]"}`}
         >
           {caption}
         </figcaption>

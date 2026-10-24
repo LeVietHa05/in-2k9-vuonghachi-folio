@@ -27,7 +27,7 @@ export function PersonalArtGallery() {
     <section className="personalArt" id="personal-art">
       <header className="personalArtIntro">
         <h2>Personal art</h2>
-        <p className="text-[35px]">
+        <p className="text-[28px]">
           “Vietnam’s exotic animals”: Inspired by arts on vintage Vietnamese
           stamps of endangered species, I wanted to draw these species to spread
           awareness on their conservation, with a twist: they’re all

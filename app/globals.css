@@ -26,14 +26,14 @@ body {
 }
 
 .research-paper {
-  background-color: #faf9f3; 
+  background-color: #faf9f3;
   background-image:
     /* radial-gradient(circle, #fff 0 43%, #d7d6d2 51% 60%, transparent 67%) 1.5%
       8% / 1.1rem 1.1rem no-repeat,
     radial-gradient(circle, #fff 0 43%, #d7d6d2 51% 60%, transparent 67%) 1.5%
       50% / 1.1rem 1.1rem no-repeat,
     radial-gradient(circle, #fff 0 43%, #d7d6d2 51% 60%, transparent 67%) 1.5%
-      92% / 1.1rem 1.1rem no-repeat, */ 
+      92% / 1.1rem 1.1rem no-repeat, */
     linear-gradient(
       90deg,
       transparent 0 10%,
@@ -358,7 +358,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: end;
-  width: min(96vw, 1500px);
+  width: min(96vw, 2500px);
   margin-inline: auto;
 }
 
@@ -366,7 +366,7 @@ body {
   position: relative;
   display: block;
   justify-self: center;
-  width: min(100%, 280px);
+  width: 100%;
   aspect-ratio: 4 / 5;
   border-radius: 1rem;
   transition: transform 180ms ease;
@@ -387,7 +387,7 @@ body {
   object-position: center;
   z-index: 1;
   opacity: 0;
-  width: 300px;
+  width: 100%;
   /* clip-path: inset(0 0 58% 0); */
   /* transform: translateY(-5rem) scale(0.94);  */
   /* transform-origin: 50% 40%; */
@@ -1154,9 +1154,9 @@ body {
 .otterDiptych {
   position: relative;
   z-index: 2;
-  width: min(56%, 34rem);
-  margin: 4% auto 0;
-  padding: 0.55rem 0.55rem 0.85rem;
+  width: min(72%, 54rem);
+  margin: 7% auto 0; 
+  padding:  0.55rem 0.55rem 0.85rem;
   background: white;
   box-shadow: 0 5px 14px rgb(23 19 109 / 20%);
 }
@@ -1179,8 +1179,8 @@ body {
   padding-top: 0.65rem;
   color: #211d64;
   font-family: "SVN Comic", "Comic Sans MS", cursive;
-  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
   text-align: center;
+  font-size: 30px;
 }
 
 .artFooter {
@@ -1418,10 +1418,6 @@ body {
     width: 64%;
     margin-top: 5%;
     padding: 0.3rem 0.3rem 0.55rem;
-  }
-
-  .otterDiptych figcaption {
-    font-size: 0.75rem;
   }
 
   .artFooter {

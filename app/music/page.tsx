@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const musicImage = (name: string) => `/images/music/${name}`;
 
 const musicCaptionClass =
-  "[font-family:'SVN_Comic','Comic_Sans_MS',cursive] text-[clamp(0.85rem,1.35vw,1.2rem)]";
+  "[font-family:'SVN_Comic','Comic_Sans_MS',cursive] text-[22px] ";
 
 export default function MusicPage() {
   return (
@@ -34,7 +34,7 @@ export default function MusicPage() {
               sizes="(max-width: 640px) 80vw, 900px"
               src="/images/shared/paper-crumpled.png"
             />
-            <p className="absolute left-[46%] top-[17%] w-[48%] text-[clamp(20px,2vw,26px)] leading-[1.5] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
+            <p className="absolute left-[46%] top-[4%] w-[48%] text-[clamp(20px,2vw,26px)] leading-[1.5] text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive]">
               I love Vietnamese culture. I love the elegance of string
               instruments. So ever since getting to know the đàn nhị in 6th
               grade, I knew it was perfect for me. I love introducing others to
@@ -78,7 +78,7 @@ export default function MusicPage() {
           <Image
             alt=""
             aria-hidden="true"
-            className="absolute left-[35%] top-[21%] z-20 w-[2.5%]"
+            className="absolute left-[35%] top-[19%] z-20 w-[2.5%]"
             height={57}
             src="/images/doodles/music-03.svg"
             width={55}

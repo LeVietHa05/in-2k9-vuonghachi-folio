@@ -7,35 +7,35 @@ const flasks = [
     href: "/art",
     image: "/images/lab/flask-art.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-12rem) ",
+    transform: "translateY(-80%) ",
   },
   {
     name: "Science Research",
     href: "/science-research",
     image: "/images/lab/flask-science-research.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-10rem) ",
+    transform: "translateY(-80%) ",
   },
   {
     name: "Music",
     href: "/music",
     image: "/images/lab/flask-music.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-12rem) ",
+    transform: "translateY(-80%) ",
   },
   {
     name: "Foreign Exchange",
     href: "/foreign-exchange",
     image: "/images/lab/flask-foreign-exchange.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-10rem) ",
+    transform: "translateY(-80%) ",
   },
   {
     name: "Teaching",
     href: "/teaching",
     image: "/images/lab/flask-teaching.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-12rem) ",
+    transform: "translateY(-80%) ",
   },
 ];
 
@@ -67,8 +67,8 @@ export default function Lab() {
                   className="labSmokeImage"
                   src={"/images/lab/smoke 1.png"}
                   alt=""
-                  width={282}
-                  height={288}
+                  width={500}
+                  height={500}
                   aria-hidden="true"
                   style={{
                     maxWidth: "100%",
