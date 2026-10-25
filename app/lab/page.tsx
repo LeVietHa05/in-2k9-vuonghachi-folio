@@ -7,41 +7,41 @@ const flasks = [
     href: "/art",
     image: "/images/lab/flask-art.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-80%) ",
+    transform: "translateY(-90%) ",
   },
   {
     name: "Science Research",
     href: "/science-research",
     image: "/images/lab/flask-science-research.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-80%) ",
+    transform: "translateY(-60%) ",
   },
   {
     name: "Music",
     href: "/music",
     image: "/images/lab/flask-music.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-80%) ",
+    transform: "translateY(-90%) ",
   },
   {
     name: "Foreign Exchange",
     href: "/foreign-exchange",
     image: "/images/lab/flask-foreign-exchange.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-80%) ",
+    transform: "translateY(-60%) ",
   },
   {
     name: "Teaching",
     href: "/teaching",
     image: "/images/lab/flask-teaching.png",
     smoke: "/images/lab/smoke.png",
-    transform: "translateY(-80%) ",
+    transform: "translateY(-90%) ",
   },
 ];
 
 export default function Lab() {
   return (
-    <main className="labPage" aria-labelledby="lab-title">
+    <main className="labPage aspect-1440/738" aria-labelledby="lab-title">
       <h1 id="lab-title" className="labTitle">
         Welcome to Chi’s lab!
       </h1>

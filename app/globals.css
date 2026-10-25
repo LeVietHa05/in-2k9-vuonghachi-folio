@@ -329,7 +329,7 @@ body {
 
 .labPage {
   position: relative;
-  min-height: 100svh;
+  min-height: 100svh;  
   overflow: hidden;
   background-color: #c5f8f2;
   background-image: url("/images/lab/background.jpg");
@@ -365,7 +365,7 @@ body {
 .labFlask {
   position: relative;
   display: block;
-  justify-self: center;
+  justify-self: end; 
   width: 100%;
   aspect-ratio: 4 / 5;
   border-radius: 1rem;

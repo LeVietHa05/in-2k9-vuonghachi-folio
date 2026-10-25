@@ -37,9 +37,9 @@ export function ProjectSection({
       <div className="projectIntro">
         <div className="projectCopy">
           <p className="artEyebrow">{eyebrow}</p>
-          <h2>{title}</h2>
+          <h2 className="ml-2!">{title}</h2>
           <p
-            className="projectDescription"
+            className={`projectDescription ${variant !== "ijso" ? "ml-4! max-w-[20rem]!" : ""}`}
             dangerouslySetInnerHTML={{ __html: description }}
           ></p>
           {variant !== "ijso" ? (

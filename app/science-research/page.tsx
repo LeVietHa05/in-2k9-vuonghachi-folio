@@ -66,8 +66,8 @@ export default function ScienceResearchPage() {
           </ProjectHeading>
 
           <div className="relative h-[760px]">
-            <ResearchPaper className="right-[5%] top-[9%] h-[73%] w-[63%] rotate-[5deg] pl-[8%] pr-[2%] pt-[2%] pb-[5%]">
-              <ul className="relative z-[1] ml-[8%] list-disc space-y-2 text-[24px] leading-8  text-justify">
+            <ResearchPaper className="right-[5%] top-[9%] h-[73%] w-[63%] rotate-[5deg] pl-[8%] pr-[2%] pt-[%] pb-[5%]">
+              <ul className="relative z-[1] ml-[8%] list-disc space-y-2 text-[24px] leading-[1.23]  text-justify">
                 <li>
                   What started as a YouTube experiment quickly became a real
                   research project. I first tried making bioplastic from cassava
@@ -77,7 +77,7 @@ export default function ScienceResearchPage() {
                   alternative—and began investigating its potential for
                   biodegradable food packaging.
                 </li>
-                <li>
+                <li className="mt-[-6px] leading-[1.2]">
                   Under the mentorship of a professor at VNU University of
                   Science, I led two team members in developing starch-based
                   biofilms from canna starch, glycerol, and acetic acid. We
@@ -117,9 +117,9 @@ export default function ScienceResearchPage() {
             className="relative h-[1320px]"
           >
             <ResearchPaper className="left-[5%] top-[5%] h-[87%] w-[88%] -rotate-[3deg]">
-              <p className="absolute left-[8%] top-[35%] w-[48%] text-[40px] leading-relaxed">
+              <p className="absolute left-[12%] top-[35%] w-[48%] text-[40px] leading-relaxed">
                 Evaluating <br />
-                the film’s physical properties
+                the film’s physical <br /> properties
               </p>
               {/* <p className="absolute bottom-[11%] left-[10%] w-[35%] text-[clamp(0.8rem,1.2vw,1.05rem)] leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
