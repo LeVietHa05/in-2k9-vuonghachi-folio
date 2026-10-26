@@ -231,7 +231,7 @@ export default function ScienceResearchPage() {
         </section>
 
         <section id="senna-emulgel" className="relative">
-          <ProjectHeading posterHref="https://docs.google.com/presentation/d/1vX4avq7D0VT84aPO8ijzwE-_THFZeKum/edit?slide=id.p3#slide=id.p3">
+          <ProjectHeading posterHref="https://drive.google.com/file/d/12bmhOzBQdLMbwoJHpCv5T0o_-vfpm9PI/view?usp=sharing">
             Development and Evaluation of an Antioxidant Emulgel Containing
             Senna timoriensis Bark Extract
           </ProjectHeading>
