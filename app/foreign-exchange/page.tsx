@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { ArtNavigation } from "../art/_components/art-navigation";
 import { Footer } from "../art/_components/footer";
-import { ResearchImage } from "../science-research/_components/research-image";
+import {
+  ResearchImage,
+  DriveVideoThumbnail,
+} from "../science-research/_components/research-image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Foreign Exchange | Vuong Ha Chi",
@@ -23,7 +27,10 @@ function PaperSheet({ className }: { className: string }) {
 
 export default function ForeignExchangePage() {
   return (
-    <main id="top" className="min-h-screen overflow-hidden bg-[#25217b] pb-14 text-white text-justify">
+    <main
+      id="top"
+      className="min-h-screen overflow-hidden bg-[#25217b] pb-14 text-white text-justify"
+    >
       <ArtNavigation currentHref="/foreign-exchange" />
 
       <div className="mx-auto w-[min(100%-2rem,1140px)]">
@@ -32,11 +39,21 @@ export default function ForeignExchangePage() {
           className="relative h-[clamp(1180px,145vw,1580px)]"
         >
           <h1
-            className="absolute left-[8%] top-[5%] z-20 max-w-[65%] text-[clamp(2rem,4.1vw,3.7rem)] leading-[1.18] font-normal text-[#b9edff]   [font-family:'Super_Crafty',Impact,sans-serif] uppercase text-left"
+            className="absolute left-[8%] top-[1%] z-20 max-w-[65%] text-[clamp(2rem,4.1vw,3.7rem)] leading-[1.18] font-normal text-[#b9edff]   [font-family:'Super_Crafty',Impact,sans-serif] uppercase text-left"
             id="apyls-title"
           >
             Asia-Pacific Young Leaders Summit (2026)
           </h1>
+
+          <Link
+            className=" absolute left-[8%] top-[9%] z-20 mt-4 inline-flex rounded-full border border-[#63baff] bg-[#0b42a3] px-5 py-1.5 text-[clamp(1.3rem,2.1vw,2rem)] leading-none font-bold text-[#00d7ff] underline decoration-[#00d7ff] underline-offset-2 transition hover:bg-[#1463c4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white [font-family:'Super_Crafty',Impact,sans-serif] uppercase"
+            href={
+              "https://drive.google.com/file/d/1O8O0QuT1dWxK85bYAxfqaNXW-Q16MYYt/view"
+            }
+            target="_blank"
+          >
+            Presentation Video
+          </Link>
 
           <PaperSheet className="left-[6%] top-[16%] h-[55%] w-[62%] rotate-[2deg]" />
           <p className="absolute left-[14%] top-[18%] z-10 w-[48%] text-[26px]  text-[#25217b] [font-family:'SVN_Comic','Comic_Sans_MS',cursive] rotate-[2deg]">
@@ -94,6 +111,13 @@ export default function ForeignExchangePage() {
             src={apylsImage("culture-fair-02.png")}
           />
         </section>
+
+        <DriveVideoThumbnail
+          fileId="1O8O0QuT1dWxK85bYAxfqaNXW-Q16MYYt"
+          alt="Video demo nghiên cứu"
+          className="static! mt-20 max-w-3xl mx-auto"
+          caption="Presentation Video"
+        ></DriveVideoThumbnail>
 
         <section
           aria-labelledby="wsif-title"
